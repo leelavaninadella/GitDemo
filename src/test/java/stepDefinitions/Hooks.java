@@ -9,7 +9,9 @@ public class Hooks {
 	public void beforeMobileValidation()
 	{
 		System.out.println("PreRequisite for before mobile validation");
+		System.out.println("PreRequisite for before mobile validation");
 	System.out.println("***********");
+	
 	}
 	
 	@After("@MobileTest")

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="7" time="0.502">
-<testcase classname="Application Login" name="Home page default Login" time="0.01">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="7" time="0.46">
+<testcase classname="Application Login" name="Home page default Login" time="0.011">
 <system-out><![CDATA[Given validate the browser..................................................passed
 When Browser is triggered...................................................passed
 Then Validate if browser is started.........................................passed
@@ -10,7 +10,7 @@ Then Home page is populated.................................................pass
 And cards displayed are "true"..............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="Home page default Login 2" time="0.008">
+<testcase classname="Application Login" name="Home page default Login 2" time="0.003">
 <system-out><![CDATA[Given validate the browser..................................................passed
 When Browser is triggered...................................................passed
 Then Validate if browser is started.........................................passed
@@ -30,7 +30,7 @@ Then Home page is populated.................................................pass
 And cards displayed are "false".............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="Home page default Login 4" time="0.005">
+<testcase classname="Application Login" name="Home page default Login 4" time="0.002">
 <system-out><![CDATA[Given validate the browser..................................................passed
 When Browser is triggered...................................................passed
 Then Validate if browser is started.........................................passed
@@ -40,7 +40,7 @@ Then Home page is populated.................................................pass
 And cards displayed are "false".............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="Home page default Login 5" time="0.011">
+<testcase classname="Application Login" name="Home page default Login 5" time="0.002">
 <system-out><![CDATA[Given validate the browser..................................................passed
 When Browser is triggered...................................................passed
 Then Validate if browser is started.........................................passed
