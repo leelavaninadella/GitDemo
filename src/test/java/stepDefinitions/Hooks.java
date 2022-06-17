@@ -1,40 +1,48 @@
 package stepDefinitions;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+
+import com.aventstack.extentreports.gherkin.model.Scenario;
+
 import io.cucumber.java.After;
-import io.cucumber.java.Before;
+import io.cucumber.java.AfterStep;
+import utils.TestContextSetUp;
+import io.cucumber.java.*;
 
 public class Hooks {
 	
-	@Before("@MobileTest")
-	public void beforeMobileValidation()
-	{
-		System.out.println("PreRequisite for before mobile validation");
-		System.out.println("PreRequisite for before mobile validation");
-	System.out.println("***********");
-	
-	}
-	
-	@After("@MobileTest")
-	public void afterMobileValidation()
-	{
-		System.out.println("PreRequisite for after mobile validation");
-		System.out.println("***********");
-	}
-	
-	@Before("WebTest")
-	public void beforeWebValidation()
-	{
-		System.out.println("PreRequisite for before Web validation");
-		System.out.println("***********");
-	}
-	
-	@After("WebTest")
-	public void afterWebValidation()
-	{
-		System.out.println("PreRequisite for after Web validation");
-		System.out.println("***********");
-	}
-	
-	
+	public TestContextSetUp testContextSetUp;
 
+	public Hooks(TestContextSetUp testContextSetUp)
+	{
+		this.testContextSetUp = testContextSetUp;
+	}
+	
+	@After
+	
+	public void teardown() throws Exception
+	{
+		testContextSetUp.baseClass.webDriverManager().quit();
+	}
+	
+	
+	/*
+	 * @AfterStep public void addScreenshots(Scenario scenario) throws Exception {
+	 * WebDriver driver = testContextSetUp.baseClass.webDriverManager();
+	 * 
+	 * 
+	 * 
+	 * TakesScreenshot ts = (TakesScreenshot) driver; File sourcePath =
+	 * ts.getScreenshotAs(OutputType.FILE); byte[] fileContent =
+	 * FileUtils.readFileToByteArray(sourcePath);
+	 * 
+	 * 
+	 * }
+	 */
 }
